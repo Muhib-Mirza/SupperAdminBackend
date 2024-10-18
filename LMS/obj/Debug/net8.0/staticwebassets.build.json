@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "n+gKKoWHTfkx5Z37w7RDqqaxzIakRGUDpSv+ZCgNP9A=",
+  "Source": "LMS.API.IntEngine",
+  "BasePath": "_content/LMS.API.IntEngine",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

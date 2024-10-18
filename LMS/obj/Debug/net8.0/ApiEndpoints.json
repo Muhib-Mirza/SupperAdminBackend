@@ -1,0 +1,144 @@
+[
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.AdminController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Admin/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "LMS.API.ViewModel.UserVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.AdminController",
+    "Method": "Login",
+    "RelativePath": "api/Admin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authObject",
+        "Type": "APL.API.Extensions.Service.GenericRequestObjects.AuthenticationObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "addMetaData",
+    "RelativePath": "api/Project/addMetaData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "LMS.API.DataModel.ViewModel.ConfigurtionVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "DeleteProject",
+    "RelativePath": "api/Project/DeleteFarm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "LMS.API.DataModel.ViewModel.Project.FarmDeleteVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "EditProject",
+    "RelativePath": "api/Project/EditProject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "project",
+        "Type": "LMS.API.DataModel.ViewModel.LMS.API.ViewModel.CreateProjectVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "GetFilter",
+    "RelativePath": "api/Project/GetFilter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "getMetaData",
+    "RelativePath": "api/Project/getMetaData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "GetProjectDetail",
+    "RelativePath": "api/Project/GetProjectDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "LMS.API.DataModel.ViewModel.Project.FarmDeleteVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "Project",
+    "RelativePath": "api/Project/Project",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
+    "Method": "SaveProject",
+    "RelativePath": "api/Project/saveProject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "project",
+        "Type": "LMS.API.DataModel.ViewModel.LMS.API.ViewModel.CreateProjectVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,22 @@
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.Repository.Authentication.deps.json
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.Repository.Authentication.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.Repository.Authentication.pdb
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.API.DataManagement.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.API.DataModel.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\APL.API.Extensions.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\APL.API.Logging.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.API.DataManagement.pdb
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\Ancera.API.DataModel.pdb
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\APL.API.Extensions.pdb
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\bin\Debug\netcoreapp3.1\APL.API.Logging.pdb
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.csproj.AssemblyReference.cache
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.AssemblyInfoInputs.cache
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.AssemblyInfo.cs
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.csproj.CoreCompileInputs.cache
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.sourcelink.json
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.R.FF369749.Up2Date
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.dll
+D:\AgriliftBackEndNew\agrilift-serverside\Repositories\Ancera.Repository.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.pdb
+E:\Smart Education Demo\LMS\LMS.API.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.dll
+E:\Smart Education Demo\LMS\LMS.API.Administration\obj\Debug\netcoreapp3.1\Ancera.Repository.Authentication.pdb
