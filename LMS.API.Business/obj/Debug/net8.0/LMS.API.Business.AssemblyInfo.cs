@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMS.API.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d664cd4144da9200cc942976ebb31782b888651c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcce0a8a60fffae4600c35e967dfdc72980c134e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMS.API.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMS.API.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

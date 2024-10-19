@@ -439,7 +439,7 @@ SELECT MAX(Tool_id) FROM Tools;
         {
             return @"DELETE FROM Project_Subject_ASOC 
              WHERE project_id = @ProjectId 
-             AND subject_id = @SubjectId and subject_id = @Id and project_subject_Id > 0;";
+             AND subject_id = @Id and project_subject_Id > 0;";
         }
         private string SQL_UPDATE_WEEK()
         {
@@ -1091,7 +1091,7 @@ SELECT MAX(Tool_id) FROM Tools;
 
                 }
                 parameters.Add("ProjectId", projectId);
-                QueryExecuter.APLQueryDeleteSingle(conn, deleteSql, parameters, transaction, dataManagementProperties);
+                QueryExecuter.APLQueryDeleteAll(conn, deleteSql, parameters, transaction, dataManagementProperties);
             }
 
             // Find items to add
