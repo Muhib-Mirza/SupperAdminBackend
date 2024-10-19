@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B1bOhwu20P7JEcKKP5uzxHA9rHOcsvzTl/z1ML0MMdywQYD3SgisZDenKAI4Dj8bvUMpGUysm2I60+eEtJhaYQ==",
+  "dgSpecHash": "KXUBSMEw0EMB1U4XyiJ35tKrhoqhdQkIbvj5cTL7zek5WfNN3hGOrTAb9sBWkHW4uEEl/+2h0t9L3WRDA67Q3w==",
   "success": true,
-  "projectFilePath": "E:\\Smart Education Solution\\ServerSide\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
+  "projectFilePath": "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

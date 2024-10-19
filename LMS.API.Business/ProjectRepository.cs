@@ -63,40 +63,79 @@ namespace LMS.API.Business
         string SQL_SELECT_PROJECT_BY_ID_V2()
         {
             return @"
-              select Projects.project_id AS projectId,
-     Projects.project_name AS projectName,
-     Projects.project_description AS projectDescription,
-     Projects.industry_id AS industryId,
-     Projects.grade_level AS gradeLevel,
-     Projects.prerequisite_learnings AS prerequisiteLearnings,
-     Projects.curriculum_points AS curriculumPoints,
-     Projects.start_date AS startDate,
-     Projects.end_date AS endDate,
-     pi.id as image_id,
-     convert(pi.image using utf8)  AS projectImagesList,Roles.role_id as 'roleId',Roles.role_name as 'roleName',Subject.subject_id as 'subjectID',Subject.subject_name as 'subjectName',
-     Industry.industry_id as 'industryID',Industry.industry_name as 'industryName',Grade.grade_id as 'GradeID',Grade.grade_name as 'GradeName' 
-     from Projects 
-     left join Project_Role_ASOC on Projects.project_id=Project_Role_ASOC.project_id
-     left join Roles on Roles.role_id=Project_Role_ASOC.role_id
-     left join Project_Grade_ASOC on Projects.project_id=Project_Grade_ASOC.project_id
-     left join Grade on Grade.grade_id=Project_Grade_ASOC.grade_id
-     left join Project_Subject_ASOC on Projects.project_id=Project_Subject_ASOC.project_id
-     left join Subject on Subject.subject_id=Project_Subject_ASOC.subject_id
-     left join Project_Industry_ASOC on Projects.project_id=Project_Industry_ASOC.project_id
-     left join Industry on Industry.industry_id=Project_Industry_ASOC.industry_id
-     LEFT JOIN 
-     Project_Images pi ON Projects.project_id = pi.project_id 
-     group by Projects.project_id ,
-     Projects.project_name ,
-     Projects.project_description ,
-     Projects.industry_id ,
-     Projects.grade_level ,
-     Projects.prerequisite_learnings,
-     Projects.curriculum_points ,
-     Projects.start_date ,
-     Projects.end_date ,Roles.role_id ,Roles.role_name,pi.image,pi.id ,Subject.subject_id,Subject.subject_name,
-     Industry.industry_id ,Industry.industry_name,Grade.grade_id,Grade.grade_name;
-     where Projects.project_id = @Id
+              SELECT 
+    Projects.project_id AS projectId,    
+    Projects.project_name AS projectName,    
+    Projects.project_description AS projectDescription,    
+    Projects.industry_id AS industryId,    
+    Projects.grade_level AS gradeLevel,    
+    Projects.prerequisite_learnings AS prerequisiteLearnings,    
+    Projects.curriculum_points AS curriculumPoints,    
+    Projects.start_date AS startDate,    
+    Projects.end_date AS endDate,    
+    pi.id AS image_id,    
+    CONVERT(pi.image USING utf8) AS projectImagesList,
+    Roles.role_id AS roleId,
+    Roles.role_name AS roleName,
+    Subject.subject_id AS subjectID,
+    Subject.subject_name AS subjectName,    
+    Industry.industry_id AS industryID,
+    Industry.industry_name AS industryName,
+    Grade.grade_id AS GradeID,
+    Grade.grade_name AS GradeName,  
+    -- Week details  
+    w.week_id AS Week_id, -- Maps to WeekVM.WeekId   
+    w.week_lesson AS lesson_plan, -- Maps to WeekVM.WeekLesson   
+    w.week_objective AS objectives, -- Maps to WeekVM.WeekObjective   
+    w.week_activities AS activities, -- Maps to WeekVM.WeekActivities  
+    -- Tool details for each week   
+    t.Tool_id AS ToolId, -- Maps to ToolVM.ToolId   
+    t.Tool_name AS ToolName -- Maps to ToolVM.ToolName
+FROM Projects    
+LEFT JOIN Project_Role_ASOC ON Projects.project_id = Project_Role_ASOC.project_id    
+LEFT JOIN Roles ON Roles.role_id = Project_Role_ASOC.role_id    
+LEFT JOIN Project_Grade_ASOC ON Projects.project_id = Project_Grade_ASOC.project_id    
+LEFT JOIN Grade ON Grade.grade_id = Project_Grade_ASOC.grade_id    
+LEFT JOIN Project_Subject_ASOC ON Projects.project_id = Project_Subject_ASOC.project_id    
+LEFT JOIN Subject ON Subject.subject_id = Project_Subject_ASOC.subject_id    
+LEFT JOIN Project_Industry_ASOC ON Projects.project_id = Project_Industry_ASOC.project_id    
+LEFT JOIN Industry ON Industry.industry_id = Project_Industry_ASOC.industry_id    
+LEFT JOIN Project_Images pi ON Projects.project_id = pi.project_id    
+-- Join week details   
+LEFT JOIN project_week_asoc pwa ON pwa.project_id = Projects.project_id   
+LEFT JOIN week w ON w.week_id = pwa.week_id    
+-- Join tool details for each week   
+LEFT JOIN project_week_tool_asoc pwta ON pwta.week_id = w.week_id   
+LEFT JOIN tools t ON t.Tool_id = pwta.Tool_id   
+WHERE Projects.project_id = 11    
+GROUP BY 
+    Projects.project_id,    
+    Projects.project_name,    
+    Projects.project_description,    
+    Projects.industry_id,    
+    Projects.grade_level,    
+    Projects.prerequisite_learnings,    
+    Projects.curriculum_points,    
+    Projects.start_date,    
+    Projects.end_date, 
+    Roles.role_id, 
+    Roles.role_name,
+    pi.image,
+    pi.id,
+    Subject.subject_id,
+    Subject.subject_name,    
+    Industry.industry_id,
+    Industry.industry_name,
+    Grade.grade_id,
+    Grade.grade_name,
+    w.week_id, 
+    w.week_lesson, 
+    w.week_objective, 
+    w.week_activities, 
+    t.Tool_id, 
+    t.Tool_name;
+
+    
             ";
         }
 
@@ -1196,17 +1235,19 @@ SELECT MAX(Tool_id) FROM Tools;
                     objProject.endDate = projectInfo.end_date;
 
                     //Get list of Project Week and fill the main object with week
-                    var projectWeek = lstProjects.Where(x => x.projectId == project).GroupBy(x => new { x.Week_id, x.Week_name })  // Group by week_id and week_name
+                    var projectWeek = lstProjects.Where(x => x.projectId == project).GroupBy(x => new { x.Week_id, x.lesson_plan,x.objectives,x.activities })  // Group by week_id and week_name
                                         .Select(g => new
                                         {
                                             WeekId = g.Key.Week_id,
-                                            WeekName = g.Key.Week_name,
+                                            lesson_plan = g.Key.lesson_plan,
+                                            objectives = g.Key.objectives,
+                                            activities = g.Key.activities,
                                             tools = lstProjects.Where(w => w.Week_id == g.Key.Week_id)
                                                                .GroupBy(w => new { w.toolId, w.toolName })
                                                                .Select(t => new ToolDedailVM
                                                                {
-                                                                   ToolId = t.Key.toolId ?? 0,
-                                                                   ToolName = t.Key.ToolName
+                                                                   ToolId = t.Key.toolId,
+                                                                   ToolName = t.Key.toolName
                                                                }).ToList()
                                         })
                                         .ToList();
@@ -1216,7 +1257,9 @@ SELECT MAX(Tool_id) FROM Tools;
                     {
                         ProjectWeekAssocVMV2 objWeekAssoc = new ProjectWeekAssocVMV2();
                         objWeekAssoc.week_id = week.WeekId;
-                        objWeekAssoc.week_name = week.WeekName;
+                        objWeekAssoc.lesson_plan = week.lesson_plan;
+                        objWeekAssoc.objectives = week.objectives;
+                        objWeekAssoc.activities = week.activities;
                         objWeekAssoc.projectTools = new List<ToolDedailVM>();
                         objProject.projectWeek.Add(objWeekAssoc);
                         

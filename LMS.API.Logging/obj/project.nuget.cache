@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "194Qy9CkSL3yTef2D5tGAluqOTlKCtyZOY0L6TJDeIF/0ioeuar2+092R5TfqVpoS/FYjzwKfBRereVZLVJI4w==",
+  "dgSpecHash": "fLiAebrdXPjkEnU2nmdHEdcAtyYvioXbCtbI+Hnx9uAF8g0uVExPGRBq2k3P7gDKFhmFBvbGl2ECUUFu6FtnqQ==",
   "success": true,
-  "projectFilePath": "E:\\Smart Education Solution\\ServerSide\\LMS.API.Logging\\LMS.API.Logging.csproj",
+  "projectFilePath": "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.1\\microsoft.extensions.configuration.binder.8.0.1.nupkg.sha512",

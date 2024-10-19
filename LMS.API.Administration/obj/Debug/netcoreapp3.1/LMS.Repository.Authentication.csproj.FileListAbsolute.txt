@@ -19,3 +19,14 @@ E:\Smart Education Solution\ServerSide\LMS.API.Administration\obj\Debug\netcorea
 E:\Smart Education Solution\ServerSide\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.sourcelink.json
 E:\Smart Education Solution\ServerSide\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
 E:\Smart Education Solution\ServerSide\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb
+E:\change git hub\smarteducation\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.deps.json
+E:\change git hub\smarteducation\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
+E:\change git hub\smarteducation\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.csproj.AssemblyReference.cache
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.AssemblyInfoInputs.cache
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.AssemblyInfo.cs
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.csproj.CoreCompileInputs.cache
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.sourcelink.json
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
+E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb

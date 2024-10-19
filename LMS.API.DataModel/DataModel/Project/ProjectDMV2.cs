@@ -28,6 +28,9 @@ namespace LMS.API.DataModel.DataModel.Project
         public string GradeName { get; set; }
         public int Week_id { get; set; }
         public string Week_name { get; set; }
+        public string lesson_plan { get; set; }
+        public string objectives { get; set; }
+        public string activities { get; set; }
         public int toolId { get; set; }
         public string toolName { get; set; }
         public int image_id { get; set; }

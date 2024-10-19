@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AxMraUr8OqPoYrXqX57aH1k028m82YytJiwa/jkdGbZHS+o8f2PIEKB7o+0aXIbpmjMMOVn3+o3uP3aPW/214g==",
+  "dgSpecHash": "e/akbd2LvH77D5LJBMX6HBirEPhYQlZ3nszFmuueNnOjHXuJdvqd7dtea8WBbTbNI0ALK8t0sKCsYleBIhNB0g==",
   "success": true,
-  "projectFilePath": "E:\\Smart Education Solution\\ServerSide\\LMS.API.Business\\LMS.API.Business.csproj",
+  "projectFilePath": "E:\\change git hub\\smarteducation\\LMS.API.Business\\LMS.API.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

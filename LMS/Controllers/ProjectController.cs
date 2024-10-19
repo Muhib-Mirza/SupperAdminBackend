@@ -298,7 +298,7 @@ namespace LMS.API.IntEngine.Controllers
             ResponseObject<IEnumerable<ProjectVMV2>> response = new ResponseObject<IEnumerable<ProjectVMV2>>();
             try
             {
-                repoResult = _repo.GetProjectDetailV2(id);
+                repoResult = _repo.GetProjectDetailV2(Id);
             }
             catch (Exception ex)
             {
