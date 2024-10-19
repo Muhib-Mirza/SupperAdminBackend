@@ -107,7 +107,7 @@ LEFT JOIN week w ON w.week_id = pwa.week_id
 -- Join tool details for each week   
 LEFT JOIN project_week_tool_asoc pwta ON pwta.week_id = w.week_id   
 LEFT JOIN tools t ON t.Tool_id = pwta.Tool_id   
-WHERE Projects.project_id = 11    
+WHERE Projects.project_id = @Id    
 GROUP BY 
     Projects.project_id,    
     Projects.project_name,    
@@ -1260,7 +1260,7 @@ SELECT MAX(Tool_id) FROM Tools;
                         objWeekAssoc.lesson_plan = week.lesson_plan;
                         objWeekAssoc.objectives = week.objectives;
                         objWeekAssoc.activities = week.activities;
-                        objWeekAssoc.projectTools = new List<ToolDedailVM>();
+                        objWeekAssoc.projectTools = week.tools;
                         objProject.projectWeek.Add(objWeekAssoc);
                         
                     }
