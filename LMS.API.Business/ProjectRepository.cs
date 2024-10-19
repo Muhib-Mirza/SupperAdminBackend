@@ -381,7 +381,7 @@ SELECT MAX(Tool_id) FROM Tools;
         private string SQL_DELETE_PROJECT_INDUSTRY()
         {
             return @"DELETE FROM Project_Industry_ASOC 
-             WHERE project_id = @ProjectId;";
+             WHERE project_id = @ProjectId and industry_id = @Id and project_industry_id > 0;";
         }
 
       
@@ -389,13 +389,13 @@ SELECT MAX(Tool_id) FROM Tools;
         private string SQL_DELETE_PROJECT_GRADE()
         {
             return @"DELETE FROM Project_Grade_ASOC 
-             WHERE project_id = @ProjectId;";
+             WHERE project_id = @ProjectId and grade_id = @Id and project_grade_Id > 0;";
         }
 
         private string SQL_DELETE_PROJECT_ROLE()
         {
             return @"DELETE FROM Project_Role_ASOC 
-             WHERE project_id = @ProjectId;";
+             WHERE project_id = @ProjectId and role_id = @Id and project_role_Id > 0;";
         }
 
         private string SQL_SELECT_PROJECT_IMAGES()
@@ -439,7 +439,7 @@ SELECT MAX(Tool_id) FROM Tools;
         {
             return @"DELETE FROM Project_Subject_ASOC 
              WHERE project_id = @ProjectId 
-             AND subject_id = @SubjectId;";
+             AND subject_id = @SubjectId and subject_id = @Id and project_subject_Id > 0;";
         }
         private string SQL_UPDATE_WEEK()
         {
@@ -981,7 +981,7 @@ SELECT MAX(Tool_id) FROM Tools;
                         }
 
                         // Manage Subject Associations
-                        List<Project_Subject_ASOC_VM> existingSubjects = QueryExecuter.APLQuerySelectAll<Project_Subject_ASOC_VM>(conn, SQL_SELECT_PROJECT_SUBJECT(), new { project_id = projectID }, transaction, dataManagementProperties).ToList();
+                        List<Project_Subject_ASOC_VM> existingSubjects = QueryExecuter.APLQuerySelectAll<Project_Subject_ASOC_VM>(conn, SQL_SELECT_PROJECT_SUBJECT(), parameters, transaction, dataManagementProperties).ToList();
                         if (project.SubjectIds != null && project.SubjectIds.Any())
                         {
                             List<long> subjectIdsAsLong = project.SubjectIds.Select(id => (long)id).ToList();
@@ -1063,7 +1063,35 @@ SELECT MAX(Tool_id) FROM Tools;
             var itemsToDelete = existingItems.Where(e => !newItems.Contains((long)typeof(T).GetProperty(idField).GetValue(e))).ToList();
             foreach (var item in itemsToDelete)
             {
-                QueryExecuter.APLQueryDeleteSingle(conn, deleteSql, item, transaction, dataManagementProperties);
+                DynamicParameters parameters = new DynamicParameters();
+                var gradeIdProperty = item.GetType().GetProperty("grade_id");
+                var RoleIdProperty = item.GetType().GetProperty("role_id");
+                var SubjectIdProperty = item.GetType().GetProperty("subject_id");
+                var IndustryIdProperty = item.GetType().GetProperty("industry_id");
+                if (gradeIdProperty != null)
+                {
+                    var IdValue = gradeIdProperty.GetValue(item);
+                    parameters.Add("Id", IdValue);
+                }
+                if (RoleIdProperty != null)
+                {
+                    var IdValue = RoleIdProperty.GetValue(item);
+                    parameters.Add("Id", IdValue);
+                }
+                if (SubjectIdProperty != null)
+                {
+                    var IdValue = SubjectIdProperty.GetValue(item);
+                    parameters.Add("Id", IdValue);
+
+                }
+                if (IndustryIdProperty != null)
+                {
+                    var IdValue = IndustryIdProperty.GetValue(item);
+                    parameters.Add("Id", IdValue);
+
+                }
+                parameters.Add("ProjectId", projectId);
+                QueryExecuter.APLQueryDeleteSingle(conn, deleteSql, parameters, transaction, dataManagementProperties);
             }
 
             // Find items to add
