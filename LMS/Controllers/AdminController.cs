@@ -7,6 +7,9 @@ using LMS.API.Extensions.Enums;
 using LMS.API.DataModel;
 using APL.API.Extensions.Service.GenericRequestObjects;
 using Ancera.API.IntEngine.Utils;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using LMS.API.DataModel.ViewModel;
 
 namespace LMS.API.IntEngine.Controllers
 {
@@ -102,5 +105,92 @@ namespace LMS.API.IntEngine.Controllers
 
         #endregion
 
+
+        [HttpPost("refreshToken")]
+        public async Task<IActionResult> refreshToken(AuthenticationObject authObject)
+        {
+            ResponseObject<AuthenticationObject> response = new ResponseObject<AuthenticationObject>();
+
+            try
+            {
+                bool isRefreshAllowed = false;
+                authObject.token = authObject.token.Trim();
+                string EnableRefreshToken = _config.GetSection("AppSettings")["EnableRefreshToken"];
+                if (!string.IsNullOrEmpty(EnableRefreshToken) && EnableRefreshToken.Trim().ToLower().Equals("true"))
+                {
+                    long sessionID = new long();
+                    var jwtToken = new JwtSecurityTokenHandler().ReadJwtToken(authObject.token);
+                    var lstClaims = jwtToken.Claims.ToList();
+                    Claim claim = lstClaims.Find(x => x.Type == ClaimTypes.Sid);
+                    if (claim != null)
+                        sessionID = Convert.ToInt64(claim.Value);
+
+                    TokenDetailsDM tokenDetails = new TokenDetailsDM();
+                    tokenDetails.actvSessionId = sessionID;
+                    tokenDetails.token = authObject.token;
+                    tokenDetails.lastActivityDateTime = DateTime.Now.ToString();
+
+                    TokenDetailsDM tokenDetailsDM = _repo.GetTokenDetailsBySessionID(tokenDetails);
+                    if (tokenDetailsDM != null)
+                    {
+                        DateTime lastActivityTime = DateTime.Parse(tokenDetailsDM.lastActivityDateTime);
+                        double timePassed = (DateTime.Now - lastActivityTime).TotalSeconds;
+                        string expireyTime = _config.GetSection("AppSettings")["TokenExpireyHours"];
+                        double seconds = 20;
+                        if (timePassed <= seconds)
+                        {
+                            isRefreshAllowed = true;
+                        }
+                        if (isRefreshAllowed)
+                        {
+                            string token = ControllerHelpingFunctions.refreshToken(authObject.token, _config);
+                            authObject.token = token;
+                            tokenDetails.token = token;
+                            tokenDetails.lastActivityDateTime = DateTime.Now.ToString();
+                            _repo.UpdateTokenDetails(tokenDetails);
+                        }
+
+                    }
+
+
+                }
+
+
+
+                response.setDataObject(MessageCodeEnum.LOGIN_SUCCESS, authObject);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ExceptionHandler.Proceed(ex));
+            }
+            return Ok(response);
+        }
+
+        [HttpPost("LogOut")]
+        public async Task<IActionResult> LogOut(AuthenticationObject authObject)
+        {
+            ResponseObject<AuthenticationObject> response = new ResponseObject<AuthenticationObject>();
+
+            try
+            {
+                authObject.token = authObject.token.Trim();
+                TokenDetailsDM tokenDetails = new TokenDetailsDM();
+                tokenDetails.token = authObject.token;
+                tokenDetails.lastActivityDateTime = DateTime.Now.ToString();
+
+
+
+                _repo.LogOut(tokenDetails);
+
+            }
+            catch (Exception ex)
+            {
+                return Ok(ExceptionHandler.Proceed(ex));
+            }
+
+
+
+            return Ok(response);
+        }
     }
 }

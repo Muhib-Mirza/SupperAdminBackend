@@ -2,6 +2,7 @@
 using APL.API.Extensions.Service.GenericRequestObjects;
 
 using LMS.API.DataModel;
+using LMS.API.DataModel.ViewModel;
 using LMS.API.ViewModel;
 
 namespace LMS.Repository.Business.Interfaces
@@ -10,6 +11,9 @@ namespace LMS.Repository.Business.Interfaces
     {
         UserDM Add(UserVM input);
         UserDM Login(AuthenticationObject authenticationObject);
+        TokenDetailsDM GetTokenDetailsBySessionID(TokenDetailsDM input);
+        TokenDetailsDM UpdateTokenDetails(TokenDetailsDM input);
+        TokenDetailsDM LogOut(TokenDetailsDM input);
 
     }
 }

@@ -32,6 +32,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LMS.API.IntEngine.Controllers.AdminController",
+    "Method": "LogOut",
+    "RelativePath": "api/Admin/LogOut",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authObject",
+        "Type": "APL.API.Extensions.Service.GenericRequestObjects.AuthenticationObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LMS.API.IntEngine.Controllers.AdminController",
+    "Method": "refreshToken",
+    "RelativePath": "api/Admin/refreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authObject",
+        "Type": "APL.API.Extensions.Service.GenericRequestObjects.AuthenticationObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
     "Method": "addMetaData",
     "RelativePath": "api/Project/addMetaData",

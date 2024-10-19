@@ -17,10 +17,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace LMS.API.IntEngine.Controllers
 {
-    //[ServiceFilter(typeof(AsyncActionFilter))]
+    [ServiceFilter(typeof(AsyncActionFilter))]
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class ProjectController : CustomControllerBase
     {
         public readonly IConfiguration _config;

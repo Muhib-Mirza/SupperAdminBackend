@@ -12,6 +12,7 @@ using Dapper;
 
 using LMS.API.DataManagement;
 using LMS.API.DataModel;
+using LMS.API.DataModel.ViewModel;
 using LMS.API.Extensions.Enums;
 using LMS.API.Extensions.Service;
 using LMS.API.ViewModel;
@@ -88,6 +89,15 @@ namespace LMS.Repository.Business
                 password = @Password;
             ";
         }
+        private readonly string SQL_UPDATE_TOKEN_BY_SESSIONID = @"UPDATE tokenDetails SET token=@token 
+                                                                 WHERE actvSessionId = @actvSessionId ";
+        private readonly string SQL_UPDATE_ISACTIVE_BY_ACTIVESESSIONID = "UPDATE active_user_session SET " +
+                "isActive = 0, isDeleted = 1, " +
+                "sesnId = @sesnid, " +
+                "modifiedSesnId = @modifiedsesnid, modifiedOn = @modifiedon " +
+                "where actvSessionId =   (SELECT actvSessionId from tokenDetails WHERE token=@token)  ";
+        private readonly string SQL_SELECT_TOKEN_BY_SESSIONID = "SELECT * from tokenDetails WHERE actvSessionId = @actvSessionId";
+
         public UserDM Add(UserVM input)
         {
             UserDM resultObj = new UserDM();
@@ -146,6 +156,63 @@ namespace LMS.Repository.Business
             }
 
             return null;
+        }
+        public TokenDetailsDM UpdateTokenDetails(TokenDetailsDM input)
+        {
+            DataManagementProperties dataManagementProperties = new DataManagementProperties();
+            dataManagementProperties.config = _config;
+
+            using (IDbConnection conn = DBMSConnection.GetConnection(_config))
+            {
+                conn.Open();
+
+                using (IDbTransaction transaction = conn.BeginTransaction())
+                {
+
+                    QueryExecuter.APLQueryUpdateSingle<long>(conn, SQL_UPDATE_TOKEN_BY_SESSIONID, input, transaction, dataManagementProperties);
+
+                    transaction.Commit();
+                }
+            }
+            return input;
+        }
+        public TokenDetailsDM LogOut(TokenDetailsDM input)
+        {
+            DataManagementProperties dataManagementProperties = new DataManagementProperties();
+            dataManagementProperties.config = _config;
+
+
+
+            using (IDbConnection conn = DBMSConnection.GetConnection(_config))
+            {
+                conn.Open();
+
+
+
+                using (IDbTransaction transaction = conn.BeginTransaction())
+                {
+                    Console.WriteLine(input.token);
+                    var abc = input.token;
+                    QueryExecuter.APLQueryUpdateSingle<long>(conn, SQL_UPDATE_ISACTIVE_BY_ACTIVESESSIONID, input, transaction, dataManagementProperties);
+                    transaction.Commit();
+                }
+            }
+
+
+
+
+            return input;
+        }
+        public TokenDetailsDM GetTokenDetailsBySessionID(TokenDetailsDM input)
+        {
+            DataManagementProperties dataManagementProperties = new DataManagementProperties();
+            dataManagementProperties.config = _config;
+            using (IDbConnection conn = DBMSConnection.GetConnection(_config))
+            {
+                conn.Open();
+                TokenDetailsDM result = QueryExecuter.APLQuerySelectSingle<TokenDetailsDM>(conn, SQL_SELECT_TOKEN_BY_SESSIONID, input, null, dataManagementProperties);
+                return result;
+            }
         }
 
     }
