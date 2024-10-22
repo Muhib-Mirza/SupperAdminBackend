@@ -15,7 +15,9 @@ namespace LMS.API.DataModel.ViewModel
             public int? IndustryId { get; set; }
             public string GradeLevel { get; set; }
             public string PrerequisiteLearnings { get; set; }
-            public int? CurriculumPoints { get; set; }
+            public string? CurriculumPoints { get; set; }
+            public string? IndustrySpecificProblem { get; set; }
+            public string? ProjectDuration { get; set; }
             public DateTime? StartDate { get; set; }
             public DateTime? EndDate { get; set; }
 

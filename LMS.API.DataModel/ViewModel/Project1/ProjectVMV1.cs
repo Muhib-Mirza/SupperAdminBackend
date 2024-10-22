@@ -20,7 +20,7 @@ namespace LMS.API.DataModel.ViewModel.Project
         
         public string SubjectName { get; set; } // Maps to p.project_id
         public string GradeName { get; set; } // Maps to p.project_id
-        public int? CurriculumPoints { get; set; } // Maps to p.project_id
+        public string? CurriculumPoints { get; set; } // Maps to p.project_id
         public string ProjectName { get; set; } // Maps to p.project_name
         public string IndustryName { get; set; } // Maps to p.project_name
         public string ImageUrl { get; set; } // Maps to p.project_name

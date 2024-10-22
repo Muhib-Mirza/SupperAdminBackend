@@ -13,7 +13,9 @@ namespace LMS.API.DataModel.ViewModel.Project
         public string projectDescription { get; set; }
         public string? gradeLevel { get; set; }
         public string? prerequisiteLearnings { get; set; }
-        public int? curriculumPoints { get; set; }
+        public string? curriculumPoints { get; set; }
+        public string? IndustrySpecificProblem { get; set; }
+        public string? ProjectDuration { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public List<ProjectImagesVM> projectImagesList { get; set; }

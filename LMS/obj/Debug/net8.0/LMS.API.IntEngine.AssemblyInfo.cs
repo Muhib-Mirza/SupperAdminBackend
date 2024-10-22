@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMS.API.IntEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d08a94b975b550586ab387fc7ed595701863034")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c8da316fc97c78043c24c175ef9e795f76f8cd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMS.API.IntEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMS.API.IntEngine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
