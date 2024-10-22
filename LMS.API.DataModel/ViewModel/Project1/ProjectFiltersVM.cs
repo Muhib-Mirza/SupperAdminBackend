@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LMS.API.DataModel.ViewModel.Project
 {
-    public class ProjectFiltersVM : BaseViewModel
+    public class ProjectFiltersVM 
     {
         public List<RoleFilterVM> lstRoleFilter { get; set; }
         public List<SubjectFilterVM> lstSubjectFilter { get; set; }
@@ -15,28 +15,28 @@ namespace LMS.API.DataModel.ViewModel.Project
         public List<GradeFilterVM> lstGradeFilter { get; set; }
     }
 
-    public class RoleFilterVM : BaseViewModel
+    public class RoleFilterVM 
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string Name { get; set; }
 
     }
 
-    public class SubjectFilterVM : BaseViewModel
+    public class SubjectFilterVM 
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class IndustryFilterVM : BaseViewModel
+    public class IndustryFilterVM
     {
-        public int Id { get; set; }
+       // public int Id { get; set; }
         public string Name { get; set; }
     }
 
-    public class GradeFilterVM : BaseViewModel
+    public class GradeFilterVM 
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public string Name { get; set; }
     }
 }

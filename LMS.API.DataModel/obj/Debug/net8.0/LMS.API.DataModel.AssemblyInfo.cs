@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMS.API.DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68eaad9c51e16e7c9488286ffbe23c0fff05f4db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d32361d6fdc230d3a5d683ea342709722c4a66dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMS.API.DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMS.API.DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

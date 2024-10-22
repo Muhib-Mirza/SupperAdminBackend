@@ -1178,7 +1178,7 @@ SELECT MAX(Tool_id) FROM Tools;
                 foreach (var role in projecRole)
                 {
                     RoleFilterVM roleFilterVM = new RoleFilterVM();
-                    roleFilterVM.Id = role.RoleID;
+                    //roleFilterVM.Id = role.RoleID;
                     roleFilterVM.Name = role.RoleName;
 
                     lstFilters.lstRoleFilter.Add(roleFilterVM);
@@ -1195,7 +1195,7 @@ SELECT MAX(Tool_id) FROM Tools;
                 foreach (var subject in projecSubject)
                 {
                     SubjectFilterVM subjectFilterVM = new SubjectFilterVM();
-                    subjectFilterVM.Id = subject.SubjectID;
+                    //subjectFilterVM.Id = subject.SubjectID;
                     subjectFilterVM.Name = subject.SubjectName;
 
                     lstFilters.lstSubjectFilter.Add(subjectFilterVM);
@@ -1212,7 +1212,7 @@ SELECT MAX(Tool_id) FROM Tools;
                 foreach (var industry in projecIndustry)
                 {
                     IndustryFilterVM industryFilterVM = new IndustryFilterVM();
-                    industryFilterVM.Id = industry.IndustryID;
+                    //industryFilterVM.Id = industry.IndustryID;
                     industryFilterVM.Name = industry.IndustryName;
                     lstFilters.lstIndustryFilter.Add(industryFilterVM);
                 }
@@ -1227,7 +1227,7 @@ SELECT MAX(Tool_id) FROM Tools;
                 foreach (var grade in projecGrade)
                 {
                     GradeFilterVM gradeFilterVM = new GradeFilterVM();
-                    gradeFilterVM.Id = grade.GradeID;
+                    //gradeFilterVM.Id = grade.GradeID;
                     gradeFilterVM.Name = grade.GradeName;
 
                     lstFilters.lstGradeFilter.Add(gradeFilterVM);
