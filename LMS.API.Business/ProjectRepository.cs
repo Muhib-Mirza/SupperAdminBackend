@@ -1152,10 +1152,10 @@ SELECT MAX(Tool_id) FROM Tools;
         public ProjectFiltersVM GetProjectFilters()
         {
             ProjectFiltersVM lstFilters = new ProjectFiltersVM();
-            lstFilters.lstRoleFilter = new List<RoleFilterVM>();
-            lstFilters.lstGradeFilter = new List<GradeFilterVM>();
-            lstFilters.lstSubjectFilter = new List<SubjectFilterVM>();
-            lstFilters.lstIndustryFilter = new List<IndustryFilterVM>();
+            lstFilters.lstRoleFilter = new List<string>();
+            lstFilters.lstGradeFilter = new List<string>();
+            lstFilters.lstSubjectFilter = new List<string>();
+            lstFilters.lstIndustryFilter = new List<string>();
 
             DataManagementProperties dataManagementProperties = new DataManagementProperties();
             dataManagementProperties.config = _config;
@@ -1177,11 +1177,11 @@ SELECT MAX(Tool_id) FROM Tools;
 
                 foreach (var role in projecRole)
                 {
-                    RoleFilterVM roleFilterVM = new RoleFilterVM();
+                    //RoleFilterVM roleFilterVM = new RoleFilterVM();
                     //roleFilterVM.Id = role.RoleID;
-                    roleFilterVM.Name = role.RoleName;
+                    //roleFilterVM.Name = role.RoleName;
 
-                    lstFilters.lstRoleFilter.Add(roleFilterVM);
+                    lstFilters.lstRoleFilter.Add(role.RoleName);
                 }
 
                 var projecSubject = lstProjectFilters.GroupBy(x => new { x.subjectID, x.subjectName })  // Group by week_id and week_name
@@ -1194,11 +1194,11 @@ SELECT MAX(Tool_id) FROM Tools;
 
                 foreach (var subject in projecSubject)
                 {
-                    SubjectFilterVM subjectFilterVM = new SubjectFilterVM();
+                    //SubjectFilterVM subjectFilterVM = new SubjectFilterVM();
                     //subjectFilterVM.Id = subject.SubjectID;
-                    subjectFilterVM.Name = subject.SubjectName;
+                    //subjectFilterVM.Name = subject.SubjectName;
 
-                    lstFilters.lstSubjectFilter.Add(subjectFilterVM);
+                    lstFilters.lstSubjectFilter.Add(subject.SubjectName);
                 }
 
                 var projecIndustry = lstProjectFilters.GroupBy(x => new { x.industryID, x.industryName })  // Group by week_id and week_name
@@ -1211,10 +1211,10 @@ SELECT MAX(Tool_id) FROM Tools;
 
                 foreach (var industry in projecIndustry)
                 {
-                    IndustryFilterVM industryFilterVM = new IndustryFilterVM();
+                    //IndustryFilterVM industryFilterVM = new IndustryFilterVM();
                     //industryFilterVM.Id = industry.IndustryID;
-                    industryFilterVM.Name = industry.IndustryName;
-                    lstFilters.lstIndustryFilter.Add(industryFilterVM);
+                    //industryFilterVM.Name = industry.IndustryName;
+                    lstFilters.lstIndustryFilter.Add(industry.IndustryName);
                 }
                 var projecGrade = lstProjectFilters.GroupBy(x => new { x.GradeID, x.GradeName })  // Group by week_id and week_name
                                         .Select(g => new
@@ -1226,11 +1226,11 @@ SELECT MAX(Tool_id) FROM Tools;
 
                 foreach (var grade in projecGrade)
                 {
-                    GradeFilterVM gradeFilterVM = new GradeFilterVM();
+                    //GradeFilterVM gradeFilterVM = new GradeFilterVM();
                     //gradeFilterVM.Id = grade.GradeID;
-                    gradeFilterVM.Name = grade.GradeName;
+                    //gradeFilterVM.Name = grade.GradeName;
 
-                    lstFilters.lstGradeFilter.Add(gradeFilterVM);
+                    lstFilters.lstGradeFilter.Add(grade.GradeName);
                 }
             }
             return lstFilters;

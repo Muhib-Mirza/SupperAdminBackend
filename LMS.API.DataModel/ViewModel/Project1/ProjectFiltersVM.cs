@@ -9,10 +9,10 @@ namespace LMS.API.DataModel.ViewModel.Project
 {
     public class ProjectFiltersVM 
     {
-        public List<RoleFilterVM> lstRoleFilter { get; set; }
-        public List<SubjectFilterVM> lstSubjectFilter { get; set; }
-        public List<IndustryFilterVM> lstIndustryFilter { get; set; }
-        public List<GradeFilterVM> lstGradeFilter { get; set; }
+        public List<string> lstRoleFilter { get; set; }
+        public List<string> lstSubjectFilter { get; set; }
+        public List<string> lstIndustryFilter { get; set; }
+        public List<string> lstGradeFilter { get; set; }
     }
 
     public class RoleFilterVM 
