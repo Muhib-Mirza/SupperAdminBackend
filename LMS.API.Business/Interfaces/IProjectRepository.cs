@@ -16,7 +16,6 @@ namespace LMS.API.Business.Interfaces
         void SaveProject(CreateProjectVM project);
         void EditProject(CreateProjectVM project);
         bool DeleteFarm(FarmDeleteVM input);
-        IEnumerable<ProjectVMV1> GetProjectDetail(FarmDeleteVM id);
         IEnumerable<ProjectVMV2> GetProjectDetailV2(FarmDeleteVM id);
         MetaDataVM GetMedaData();
         long AddMedaData(ConfigurtionVm input);

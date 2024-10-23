@@ -133,22 +133,6 @@
   },
   {
     "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
-    "Method": "GetProjectDetail",
-    "RelativePath": "api/Project/GetProjectDetail",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "LMS.API.DataModel.ViewModel.Project.FarmDeleteVM",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LMS.API.IntEngine.Controllers.ProjectController",
     "Method": "GetProjectDetailV2",
     "RelativePath": "api/Project/GetProjectDetailV2",
     "HttpMethod": "POST",

@@ -242,12 +242,7 @@ GROUP BY
             SET is_project_deleted = 1
             WHERE project_id = @Id";
         }
-        string SQL_UPDATE_PROJECT_IMAGE()
-        {
-            return @"UPDATE Project_Images
-            SET is_project_deleted = 1
-            WHERE project_id = @projectId";
-        }
+      
         private string SQL_INSERT_PROJECT()
         {
              
@@ -368,20 +363,6 @@ SELECT MAX(Tool_id) FROM Tools;
 
       
 
-        private string SQL_INSERT_PROJECT_IMAGES()
-        {
-            return @"INSERT INTO Project_Images (project_id, image) 
-             VALUES (@ProjectId, @Image);";
-        }
-
-        private string SQL_DELETE_PROJECT_IMAGES()
-        {
-            return @"DELETE FROM Project_Images 
-             WHERE project_id = @ProjectId;";
-        }
-
-      
-
         private string SQL_DELETE_PROJECT_INDUSTRY()
         {
             return @"DELETE FROM Project_Industry_ASOC 
@@ -400,19 +381,6 @@ SELECT MAX(Tool_id) FROM Tools;
         {
             return @"DELETE FROM Project_Role_ASOC 
              WHERE project_id = @ProjectId and role_id = @Id and project_role_Id > 0;";
-        }
-
-        private string SQL_SELECT_PROJECT_IMAGES()
-        {
-            return @"SELECT id, project_id, image 
-             FROM Project_Images 
-             WHERE project_id = @ProjectId;";
-        }
-
-        private string SQL_DELETE_PROJECT_IMAGE()
-        {
-            return @"DELETE FROM Project_Images 
-             WHERE id = @ImageId;";
         }
 
         private string SQL_SELECT_PROJECT_INDUSTRY()
@@ -445,44 +413,8 @@ SELECT MAX(Tool_id) FROM Tools;
              WHERE project_id = @ProjectId 
              AND subject_id = @Id and project_subject_Id > 0;";
         }
-        private string SQL_UPDATE_WEEK()
-        {
-            return @"UPDATE Week 
-             SET week_lesson = @lessonPlan, 
-                 week_objective = @objectives, 
-                 week_activities = @activities, 
-                 modification_date = NOW(), 
-                 modified_by = @modifiedBy
-             WHERE week_id = @weekId;";
-        }
-
-        private string SQL_SELECT_WEEK_TOOLS()
-        {
-            return @"SELECT project_week_tool_id, project_id, week_id, tool_id 
-             FROM Project_Week_Tool_ASOC 
-             WHERE project_id = @ProjectId 
-             AND week_id = @WeekId;";
-        }
-        private string SQL_DELETE_PROJECT_WEEK_TOOLS()
-        {
-            return @"DELETE FROM Project_Week_Tool_ASOC 
-             WHERE project_id = @ProjectId 
-             AND week_id = @WeekId;";
-        }
-        private string SQL_SELECT_PROJECT_WEEK()
-        {
-            return @"SELECT * 
-             FROM Project_Week_ASOC 
-             WHERE project_id = @project_id 
-             AND week_id = @week_id;";
-        }
-        private string SQL_SELECT_PROJECT_WEEKS_FOR_PROJECT()
-        {
-            return @"SELECT project_id,project_week_id as week_id
-             FROM Project_Week_ASOC 
-             WHERE project_id = @project_id;";
-        }
-        private string SQL_DELETE_PROJECT_WEEK()
+       
+       private string SQL_DELETE_PROJECT_WEEK()
         {
             return @"DELETE FROM Project_Week_ASOC 
              WHERE project_id = @project_id 
@@ -814,22 +746,7 @@ SELECT MAX(Tool_id) FROM Tools;
             }
             return result;
         }
-        public IEnumerable<ProjectVMV1> GetProjectDetail(FarmDeleteVM Id)
-        {
-            DataManagementProperties dataManagementProperties = new DataManagementProperties();
-            dataManagementProperties.config = _config;
-            using (IDbConnection conn = DBMSConnection.GetConnection(_config))
-            {
-                conn.Open();
-                DynamicParameters parameters = new DynamicParameters();
-                parameters.Add("Id", Id.Id);
-                // Step 1: Set session group_concat_max_len
-                var setGroupConcatLimitQuery = "SET SESSION group_concat_max_len = 1000000;";
-                conn.Execute(setGroupConcatLimitQuery);
-                return QueryExecuter.APLQuerySelectAll<ProjectVMV1>(conn, SQL_SELECT_PROJECT_BY_ID(), parameters, null, dataManagementProperties);
-            }
-
-        }
+       
         public MetaDataVM GetMedaData()
         {
             DataManagementProperties dataManagementProperties = new DataManagementProperties();
@@ -1105,50 +1022,6 @@ SELECT MAX(Tool_id) FROM Tools;
                 var associationItem = Activator.CreateInstance<T>();
                 typeof(T).GetProperty("project_id").SetValue(associationItem, projectId);
                 typeof(T).GetProperty(idField).SetValue(associationItem, newItem);
-                QueryExecuter.APLQueryInsertSingle<long>(conn, insertSql, associationItem, transaction, dataManagementProperties);
-            }
-        }
-
-        private void UpdateAssociationsTool<T>(IDbConnection conn, List<T> existingItems, List<int> newItems, string insertSql, string deleteSql, IDbTransaction transaction, DataManagementProperties dataManagementProperties, long projectId, long weekId, string idField)
-        {
-            // Convert int tools to long since newItems is List<int>
-            List<long> newItemsAsLong = newItems.Select(i => (long)i).ToList();
-
-            // Get the property information for the given idField and project_id, week_id
-            var idProperty = typeof(T).GetProperty(idField);
-            var projectIdProperty = typeof(T).GetProperty("project_id");
-            var weekIdProperty = typeof(T).GetProperty("week_id");
-
-            // Ensure the properties exist
-            if (idProperty == null || projectIdProperty == null || weekIdProperty == null)
-                throw new InvalidOperationException($"The type {typeof(T)} does not contain the necessary properties.");
-
-            // Find items to delete (existing items that are not in newItems)
-            var itemsToDelete = existingItems
-                .Where(e => !newItemsAsLong.Contains(Convert.ToInt64(idProperty.GetValue(e))))
-                .ToList();
-
-            foreach (var item in itemsToDelete)
-            {
-                QueryExecuter.APLQueryDeleteSingle(conn, deleteSql, item, transaction, dataManagementProperties);
-            }
-
-            // Find items to add (new items that are not in existingItems)
-            var itemsToAdd = newItemsAsLong
-                .Where(n => !existingItems.Any(e => Convert.ToInt64(idProperty.GetValue(e)) == n))
-                .ToList();
-
-            foreach (var newItem in itemsToAdd)
-            {
-                // Create a new instance of T (the association class)
-                var associationItem = Activator.CreateInstance<T>();
-
-                // Set the project_id, week_id, and tool_id on the new instance
-                projectIdProperty.SetValue(associationItem, projectId);
-                weekIdProperty.SetValue(associationItem, weekId);
-                idProperty.SetValue(associationItem, newItem);
-
-                // Insert the new association into the database
                 QueryExecuter.APLQueryInsertSingle<long>(conn, insertSql, associationItem, transaction, dataManagementProperties);
             }
         }
