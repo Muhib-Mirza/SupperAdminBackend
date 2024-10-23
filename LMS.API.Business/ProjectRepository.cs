@@ -88,6 +88,7 @@ namespace LMS.API.Business
     w.week_lesson AS lesson_plan, -- Maps to WeekVM.WeekLesson   
     w.week_objective AS objectives, -- Maps to WeekVM.WeekObjective   
     w.week_activities AS activities, -- Maps to WeekVM.WeekActivities  
+    w.step_caption AS step_caption,
     -- Tool details for each week   
     t.Tool_id AS ToolId, -- Maps to ToolVM.ToolId   
     t.Tool_name AS ToolName -- Maps to ToolVM.ToolName
@@ -302,7 +303,7 @@ GROUP BY
 
         private string SQL_INSERT_WEEK()
         {
-            return @"INSERT INTO Week (week_lesson, week_objective,week_activities) VALUES (@lessonPlan, @objectives,@activities);
+            return @"INSERT INTO Week (week_lesson, week_objective,week_activities,step_caption) VALUES (@lessonPlan, @objectives,@activities,@stepCaption);
             SELECT LAST_INSERT_ID()";
         }
 
@@ -1267,13 +1268,14 @@ SELECT MAX(Tool_id) FROM Tools;
                     objProject.endDate = projectInfo.end_date;
 
                     //Get list of Project Week and fill the main object with week
-                    var projectWeek = lstProjects.Where(x => x.projectId == project).GroupBy(x => new { x.Week_id, x.lesson_plan,x.objectives,x.activities })  // Group by week_id and week_name
+                    var projectWeek = lstProjects.Where(x => x.projectId == project).GroupBy(x => new { x.Week_id, x.lesson_plan,x.objectives,x.activities,x.step_caption })  // Group by week_id and week_name
                                         .Select(g => new
                                         {
                                             WeekId = g.Key.Week_id,
                                             lesson_plan = g.Key.lesson_plan,
                                             objectives = g.Key.objectives,
                                             activities = g.Key.activities,
+                                            step_caption = g.Key.step_caption,
                                             tools = lstProjects.Where(w => w.Week_id == g.Key.Week_id)
                                                                .GroupBy(w => new { w.toolId, w.toolName })
                                                                .Select(t => new ToolDedailVM
@@ -1292,6 +1294,7 @@ SELECT MAX(Tool_id) FROM Tools;
                         objWeekAssoc.lesson_plan = week.lesson_plan;
                         objWeekAssoc.objectives = week.objectives;
                         objWeekAssoc.activities = week.activities;
+                        objWeekAssoc.step_caption = week.step_caption;
                         objWeekAssoc.projectTools = week.tools;
                         objProject.projectWeek.Add(objWeekAssoc);
                         

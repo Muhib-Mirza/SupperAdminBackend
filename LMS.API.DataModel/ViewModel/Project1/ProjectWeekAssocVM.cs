@@ -13,6 +13,7 @@ namespace LMS.API.DataModel.ViewModel.Project
         public int week_id { get; set; }
         public string week_name { get; set; }
         public string lesson_plan { get; set; }
+        public string step_caption { get; set; }
         public string objectives { get; set; }
         public string activities { get; set; }
         public List<ToolDedailVM> projectTools { get; set; }

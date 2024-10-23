@@ -32,6 +32,7 @@ namespace LMS.API.DataModel.DataModel.Project
         public string Week_name { get; set; }
         public string lesson_plan { get; set; }
         public string objectives { get; set; }
+        public string step_caption { get; set; }
         public string activities { get; set; }
         public int toolId { get; set; }
         public string toolName { get; set; }

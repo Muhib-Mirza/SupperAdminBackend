@@ -38,6 +38,7 @@ namespace LMS.API.DataModel.ViewModel
             public string lessonPlan { get; set; }
             public string objectives { get; set; }
             public string activities { get; set; }
+            public string stepCaption { get; set; }
             public List<long> Tools { get; set; }
         }
 
