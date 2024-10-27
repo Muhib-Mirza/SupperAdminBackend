@@ -17,10 +17,10 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace LMS.API.IntEngine.Controllers
 {
-    [ServiceFilter(typeof(AsyncActionFilter))]
+ //   [ServiceFilter(typeof(AsyncActionFilter))]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+ //   [Authorize]
     public class ProjectController : CustomControllerBase
     {
         public readonly IConfiguration _config;
@@ -167,7 +167,7 @@ namespace LMS.API.IntEngine.Controllers
             return Ok(response);
         }
 
-        [HttpPost("GetProjectDetailV2")]
+        [HttpPost("GetProjectDetail")]
         public async Task<IActionResult> GetProjectDetailV2([FromBody] FarmDeleteVM Id)
         {
             IEnumerable<ProjectVMV2> repoResult;

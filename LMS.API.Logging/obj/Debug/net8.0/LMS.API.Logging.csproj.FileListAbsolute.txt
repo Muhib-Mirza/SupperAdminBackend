@@ -48,3 +48,16 @@ E:\change git hub\smarteducation\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Loggin
 E:\change git hub\smarteducation\LMS.API.Logging\obj\Debug\net8.0\refint\LMS.API.Logging.dll
 E:\change git hub\smarteducation\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.pdb
 E:\change git hub\smarteducation\LMS.API.Logging\obj\Debug\net8.0\ref\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\bin\Debug\net8.0\LMS.API.Logging.deps.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\bin\Debug\net8.0\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\bin\Debug\net8.0\LMS.API.Logging.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.AssemblyInfo.cs
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.sourcelink.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\refint\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\LMS.API.Logging.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Logging\obj\Debug\net8.0\ref\LMS.API.Logging.dll

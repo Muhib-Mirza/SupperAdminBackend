@@ -12,6 +12,7 @@ using Dapper;
 
 using LMS.API.DataManagement;
 using LMS.API.DataModel;
+using LMS.API.DataModel.DataModel;
 using LMS.API.DataModel.ViewModel;
 using LMS.API.Extensions.Enums;
 using LMS.API.Extensions.Service;
@@ -33,55 +34,42 @@ namespace LMS.Repository.Business
             //qv = new QueryValidator2();
         }
 
+        string SQL_Insert_Asses()
+        {
+            return @"Insert into UserPersonality (
+                   UserID,
+                   PersonalityTypeID
+                   ) VALUES (
+                   @UserId,
+                   (Select PersonalityTypeID from PersonalityTypes where Code = @Code)
+                   )";
+        }
         string SQL_INSERT_ROW()
         {
-           return @" INSERT INTO Users (
-                first_name, 
-                last_name, 
+            return @" INSERT INTO Users (
+                user_name, 
+                phone_number, 
                 email_id, 
                 password, 
-                extrovert, 
-                sensing, 
-                thinker, 
-                judger, 
-                created_on, 
-                created_by, 
-                modified_on, 
-                modified_by
+                created_on,
+                isAssesed
             ) VALUES (
-                @FirstName, 
-                @LastName, 
+                @UserName, 
+                @PhoneNumber, 
                 @EmailId, 
                 @Password, 
-                @Extrovert, 
-                @Sensing, 
-                @Thinker, 
-                @Judger, 
-                @CreatedOn, 
-                @CreatedBy, 
-                @ModifiedOn, 
-                @ModifiedBy
+                NOW(),
+                0
             );
 
             " +
-          "SELECT LAST_INSERT_ID();";
+           "SELECT LAST_INSERT_ID();";
         }
         string SQL_SELECT_BY_EMAIL__2()
         {
-           return @" SELECT 
-                user_id AS UserId, 
-                first_name AS FirstName, 
-                last_name AS LastName, 
-                email_id AS EmailId, 
-                password AS Password, 
-                extrovert AS Extrovert, 
-                sensing AS Sensing, 
-                thinker AS Thinker, 
-                judger AS Judger, 
-                created_on AS CreatedOn, 
-                created_by AS CreatedBy, 
-                modified_on AS ModifiedOn, 
-                modified_by AS ModifiedBy
+            return @" SELECT 
+                user_id AS UserId,
+                isAssesed
             FROM 
                 Users
             WHERE 
@@ -98,7 +86,7 @@ namespace LMS.Repository.Business
                 "where actvSessionId =   (SELECT actvSessionId from tokenDetails WHERE token=@token)  ";
         private readonly string SQL_SELECT_TOKEN_BY_SESSIONID = "SELECT * from tokenDetails WHERE actvSessionId = @actvSessionId";
 
-        public UserDM Add(UserVM input)
+        public UserDM Add(UserModel input)
         {
             UserDM resultObj = new UserDM();
             using (IDbConnection conn = DBMSConnection.GetConnection(_config))
@@ -116,12 +104,12 @@ namespace LMS.Repository.Business
                     //formObjClientSiteAssDM(ref input, input.userId, input.lstClientIDS, conn, transaction, dataManagementProperties);
                     UserDM userDMInput = new UserDM(input);
 
-                    
+
 
 
                     // getTenant Id of current selected organization 
-                   
-                    
+
+
                     long insertedId = Add(userDMInput, conn, transaction, dataManagementProperties, 20, 20);
 
                     resultObj.ID = insertedId;
@@ -213,6 +201,45 @@ namespace LMS.Repository.Business
                 TokenDetailsDM result = QueryExecuter.APLQuerySelectSingle<TokenDetailsDM>(conn, SQL_SELECT_TOKEN_BY_SESSIONID, input, null, dataManagementProperties);
                 return result;
             }
+        }
+        public bool AssesMe(AssesmentModel Obj)
+        {
+            bool resultObj = true;
+            using (IDbConnection conn = DBMSConnection.GetConnection(_config))
+            {
+                DataManagementProperties dataManagementProperties = new DataManagementProperties();
+                dataManagementProperties.config = _config;
+
+
+                conn.Open();
+
+                using (var transaction = conn.BeginTransaction())
+                {
+                    //MEMO: trim Email for Further comparison of existing user.
+                    //formObjClientSiteAssDM(ref input, input.userId, input.lstClientIDS, conn, transaction, dataManagementProperties);
+                    AssesDM userDMInput = new AssesDM(Obj);
+                    // getTenant Id of current selected organization 
+                    bool insertedId = AddAssesMe(userDMInput, conn, transaction, dataManagementProperties, 20, 20);
+                    transaction.Commit();
+                }
+
+            }
+            return true;
+        }
+        private bool AddAssesMe(AssesDM input, IDbConnection conn, IDbTransaction transaction, DataManagementProperties dataManagementProperties, int expiryMinutes, int expiryMinutesPIN)
+        {
+            bool result = false;
+            try
+            {
+                QueryExecuter.APLQueryInsertSingle<long>(conn, SQL_Insert_Asses(), input, transaction, dataManagementProperties);
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            return result;
         }
 
     }

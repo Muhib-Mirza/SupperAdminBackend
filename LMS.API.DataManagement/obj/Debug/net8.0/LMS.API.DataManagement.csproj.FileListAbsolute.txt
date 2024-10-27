@@ -68,3 +68,21 @@ E:\change git hub\smarteducation\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API
 E:\change git hub\smarteducation\LMS.API.DataManagement\obj\Debug\net8.0\refint\LMS.API.DataManagement.dll
 E:\change git hub\smarteducation\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.pdb
 E:\change git hub\smarteducation\LMS.API.DataManagement\obj\Debug\net8.0\ref\LMS.API.DataManagement.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.DataManagement.deps.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.DataManagement.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.DataManagement.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.Extensions.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\bin\Debug\net8.0\LMS.API.Logging.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.AssemblyInfo.cs
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.sourcelink.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.csproj.CopyComplete
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\refint\LMS.API.DataManagement.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\LMS.API.DataManagement.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.DataManagement\obj\Debug\net8.0\ref\LMS.API.DataManagement.dll

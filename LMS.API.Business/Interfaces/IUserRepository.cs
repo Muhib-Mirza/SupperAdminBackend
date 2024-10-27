@@ -9,11 +9,11 @@ namespace LMS.Repository.Business.Interfaces
 {
     public interface IUserRepository 
     {
-        UserDM Add(UserVM input);
+        UserDM Add(UserModel input);
         UserDM Login(AuthenticationObject authenticationObject);
         TokenDetailsDM GetTokenDetailsBySessionID(TokenDetailsDM input);
         TokenDetailsDM UpdateTokenDetails(TokenDetailsDM input);
         TokenDetailsDM LogOut(TokenDetailsDM input);
-
+        bool AssesMe(AssesmentModel Obj);
     }
 }

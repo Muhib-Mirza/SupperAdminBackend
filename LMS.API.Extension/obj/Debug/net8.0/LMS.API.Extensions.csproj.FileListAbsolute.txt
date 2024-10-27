@@ -60,3 +60,19 @@ E:\change git hub\smarteducation\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Exte
 E:\change git hub\smarteducation\LMS.API.Extension\obj\Debug\net8.0\refint\LMS.API.Extensions.dll
 E:\change git hub\smarteducation\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.pdb
 E:\change git hub\smarteducation\LMS.API.Extension\obj\Debug\net8.0\ref\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\bin\Debug\net8.0\LMS.API.Extensions.deps.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\bin\Debug\net8.0\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\bin\Debug\net8.0\LMS.API.Extensions.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\bin\Debug\net8.0\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\bin\Debug\net8.0\LMS.API.Logging.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.AssemblyInfo.cs
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.sourcelink.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.csproj.CopyComplete
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\refint\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\LMS.API.Extensions.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Extension\obj\Debug\net8.0\ref\LMS.API.Extensions.dll

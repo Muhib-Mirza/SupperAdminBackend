@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LMS.Repository.Authentication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+099bbe28af1a98e1c01086827cefa6efcc804b11")]
 [assembly: System.Reflection.AssemblyProductAttribute("LMS.Repository.Authentication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LMS.Repository.Authentication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

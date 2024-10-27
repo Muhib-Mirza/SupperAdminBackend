@@ -84,3 +84,25 @@ E:\change git hub\smarteducation\LMS.API.Business\bin\Debug\net8.0\LMS.API.Exten
 E:\change git hub\smarteducation\LMS.API.Business\bin\Debug\net8.0\LMS.API.Logging.pdb
 E:\change git hub\smarteducation\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.csproj.CopyComplete
 E:\change git hub\smarteducation\LMS.API.Business\obj\Debug\net8.0\ref\LMS.API.Business.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Business.deps.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Business.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Business.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.DataManagement.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.DataModel.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Extensions.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Logging.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.DataManagement.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.DataModel.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Extensions.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\bin\Debug\net8.0\LMS.API.Logging.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.AssemblyInfo.cs
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.sourcelink.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.csproj.CopyComplete
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\refint\LMS.API.Business.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\LMS.API.Business.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Business\obj\Debug\net8.0\ref\LMS.API.Business.dll

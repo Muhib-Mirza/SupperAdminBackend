@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {}
+    "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {}
   },
   "projects": {
-    "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj": {
+    "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj",
         "projectName": "LMS.API.DataManagement",
-        "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
-                "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj"
+              "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj"
               }
             }
           }
@@ -43,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -99,25 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {
+    "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
         "projectName": "LMS.API.DataModel",
-        "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -125,18 +111,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj": {
-                "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj"
+              "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataManagement\\LMS.API.DataManagement.csproj"
               },
-              "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
-                "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj"
+              "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj"
               }
             }
           }
@@ -145,11 +130,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -171,25 +151,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
+    "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj",
         "projectName": "LMS.API.Extensions",
-        "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Extension\\LMS.API.Extensions.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\change git hub\\smarteducation\\LMS.API.Extension\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\LMS.API.Extensions.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Extension\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -197,15 +173,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj": {
-                "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj"
+              "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\LMS.API.Logging.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\LMS.API.Logging.csproj"
               }
             }
           }
@@ -214,11 +189,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -240,25 +210,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj": {
+    "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\LMS.API.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\LMS.API.Logging.csproj",
         "projectName": "LMS.API.Logging",
-        "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Logging\\LMS.API.Logging.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "E:\\change git hub\\smarteducation\\LMS.API.Logging\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\LMS.API.Logging.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Logging\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -266,7 +232,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -279,11 +244,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -315,7 +275,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

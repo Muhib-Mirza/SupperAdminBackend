@@ -45,26 +45,26 @@ namespace LMS.API.IntEngine.Controllers
         
 
               
-        [HttpPost("CreateUser")]
-        public async Task<IActionResult> CreateUser([FromBody] UserVM input)
-        {
-            ResponseObject<UserVM> response = new ResponseObject<UserVM>();
+        //[HttpPost("CreateUser")]
+        //public async Task<IActionResult> CreateUser([FromBody] UserVM input)
+        //{
+        //    ResponseObject<UserVM> response = new ResponseObject<UserVM>();
 
-            try
-            {
-                UserDM repoResult = _repo.Add(input);
-                input.EmailId = repoResult.EmailId;
-            }
-            catch (Exception ex)
-            {
+        //    try
+        //    {
+        //        UserDM repoResult = _repo.Add(input);
+        //        input.EmailId = repoResult.EmailId;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                return Ok(ExceptionHandler.Proceed(ex));
-            }
+        //        return Ok(ExceptionHandler.Proceed(ex));
+        //    }
 
-            response.setDataObject(MessageCodeEnum.CREATE_SUCCESS, input, PlaceHoldersEnum.Data, PlaceHoldersEnum.User.GetDescription().ToLower());
+        //    response.setDataObject(MessageCodeEnum.CREATE_SUCCESS, input, PlaceHoldersEnum.Data, PlaceHoldersEnum.User.GetDescription().ToLower());
 
-            return Ok(response);
-        }
+        //    return Ok(response);
+        //}
         [HttpPost("Login")]
         public async Task<IActionResult> Login(AuthenticationObject authObject)
         {
@@ -75,24 +75,23 @@ namespace LMS.API.IntEngine.Controllers
             {
 
                 string ip = Convert.ToString(Request.HttpContext.Connection.RemoteIpAddress);
-               
+
                 UserDM userFromRepo = _repo.Login(authObject);
+                authObject.Password = null;
+                authObject.EmailId = null;
+                authObject.userId = userFromRepo.UserId;
+                authObject.isAssesed = userFromRepo.isAssesed;
 
-
-                
-
-
-
-               // authObject.userId = userFromRepo.ID;
+                // authObject.userId = userFromRepo.ID;
 
 
 
                 //userFromRepo.tenantId
                 var token = ControllerHelpingFunctions.generateToken(userFromRepo, _config, authObject.userId);
 
-              
+
                 authObject.token = token;
-                
+
                 response.setDataObject(API.Extensions.Enums.MessageCodeEnum.LOGIN_SUCCESS, authObject);
             }
             catch (Exception ex)
@@ -101,6 +100,25 @@ namespace LMS.API.IntEngine.Controllers
             }
 
             return Ok(response);
+        }
+
+        [HttpPost("AddUser")]
+        public async Task<IActionResult> AddUser([FromBody] UserModel Obj)
+        {
+            UserDM repoResult = _repo.Add(Obj);
+            ResponseObject<UserModel> response = new ResponseObject<UserModel>();
+            Obj.Password = repoResult.Password;
+            Obj.EmailId = repoResult.EmailId;
+            Obj.UserId = repoResult.ID;
+            response.setDataObject(MessageCodeEnum.CREATE_SUCCESS, Obj, PlaceHoldersEnum.Data, PlaceHoldersEnum.User.GetDescription().ToLower());
+            return Ok(response);
+        }
+
+        [HttpPost("AddAssesment")]
+        public async Task<IActionResult> AddAssesment(AssesmentModel Obj)
+        {
+            bool result = _repo.AssesMe(Obj);
+            return Ok(result);
         }
 
         #endregion
@@ -192,5 +210,7 @@ namespace LMS.API.IntEngine.Controllers
 
             return Ok(response);
         }
+
+
     }
 }

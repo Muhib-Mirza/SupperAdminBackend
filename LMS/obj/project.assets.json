@@ -3284,24 +3284,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\change git hub\\smarteducation\\LMS\\LMS.API.IntEngine.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS\\LMS.API.IntEngine.csproj",
       "projectName": "LMS.API.IntEngine",
-      "projectPath": "E:\\change git hub\\smarteducation\\LMS\\LMS.API.IntEngine.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "E:\\change git hub\\smarteducation\\LMS\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS\\LMS.API.IntEngine.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3309,21 +3304,20 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\change git hub\\smarteducation\\LMS.API.Administration\\LMS.Repository.Authentication.csproj": {
-              "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Administration\\LMS.Repository.Authentication.csproj"
+            "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Administration\\LMS.Repository.Authentication.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Administration\\LMS.Repository.Authentication.csproj"
             },
-            "E:\\change git hub\\smarteducation\\LMS.API.Business\\LMS.API.Business.csproj": {
-              "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.Business\\LMS.API.Business.csproj"
+            "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Business\\LMS.API.Business.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.Business\\LMS.API.Business.csproj"
             },
-            "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {
-              "projectPath": "E:\\change git hub\\smarteducation\\LMS.API.DataModel\\LMS.API.DataModel.csproj"
+            "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Muhib\\Ai Project\\LMS\\SupperAdminBackend\\LMS.API.DataModel\\LMS.API.DataModel.csproj"
             }
           }
         }
@@ -3332,11 +3326,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3379,7 +3368,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -30,3 +30,14 @@ E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\
 E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.sourcelink.json
 E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
 E:\change git hub\smarteducation\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.deps.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\bin\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.AssemblyInfo.cs
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.sourcelink.json
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.dll
+C:\Users\User\Desktop\Muhib\Ai Project\LMS\SupperAdminBackend\LMS.API.Administration\obj\Debug\netcoreapp3.1\LMS.Repository.Authentication.pdb
